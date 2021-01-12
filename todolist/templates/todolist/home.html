@@ -1,0 +1,17 @@
+{% extends "todolist/base.html" %}
+{% block content %}
+    <h1 style="text-align: center; padding: 20px;">
+        What would you like to add to your planner?
+    </h1>
+    <form method="POST" actions="/" style="text-align: center">
+        {% csrf_token %}
+        {{form.category}}
+        {{form.title}}
+        <div style="padding: 10px;">
+            {{form.due_date}}
+        </div>
+        <input type="submit" name="Create Task" class="button" value="Create">
+    </form>
+    <body>
+    </body>
+{% endblock %}

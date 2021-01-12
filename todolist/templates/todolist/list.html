@@ -1,0 +1,68 @@
+{% extends "todolist/base.html" %}
+{% block content %}
+<h1 style="text-align: center; padding: 20px;">
+    Dashboard
+</h1>
+<div class='container'>
+    <div class='reminder'>
+        <h2 class=>Reminders</h2>
+            {% for task in tasks %}
+                {% if task.category == 2 %}
+                    <div class='item'>
+                        <p class='title'><a class='title' href="{% url 'todolist-detail' task.id %}">{{ task.title }}</a></p>
+                        <div class='date'>
+                            <p style="float: left; clear: left; padding-right:7px;"><img src="https://imgur.com/APUZazz.png" style="width:25px;height:25px;"></p>
+                            <p>{{ task.due_date }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+    </div>
+
+    <div class='task'>
+        <h2>Tasks</h2>
+            {% for task in tasks %}
+                {% if task.category == 3 %}
+                    <div class='item'>
+                        <p class='title'><a class='title' href="{% url 'todolist-detail' task.id %}">{{ task.title }}</a></p>
+                        <div class='date'>
+                            <p style="float: left; clear: left; padding-right:7px;"><img src="https://imgur.com/APUZazz.png" style="width:25px;height:25px;"></p>
+                            <p>{{ task.due_date }}</p>
+                        </div>
+                    </div> 
+                {% endif %}
+            {% endfor %}
+    </div>
+   
+    <div class='assignment'>
+        <h2>Assignments</h2>
+            {% for task in tasks %}
+                {% if task.category == 4 %}
+                    <div class='item'>
+                        <p class='title'><a class='title' href="{% url 'todolist-detail' task.id %}">{{ task.title }}</a></p>
+                        <div class='date'>
+                            <p style="float: left; clear: left; padding-right:7px;"><img src="https://imgur.com/APUZazz.png" style="width:25px;height:25px;"></p>
+                            <p>{{ task.due_date }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+    </div>
+
+    <div class='exam'>
+        <h2>Exams</h2>
+            {% for task in tasks %}
+                {% if task.category == 5 %}
+                    <div class='item'>
+                        <p class='title'><a class='title' href="{% url 'todolist-detail' task.id %}">{{ task.title }}</a></p>
+                        <div class='date'>
+                            <p style="float: left; clear: left; padding-right:7px;"><img src="https://imgur.com/APUZazz.png" style="width:25px;height:25px;"></p>
+                            <p>{{ task.due_date }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+    </div>
+</div>       
+
+{% endblock %}

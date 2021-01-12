@@ -1,0 +1,10 @@
+{% extends "todolist/base.html" %}
+{% block content %}
+<h1 style="text-align:center; padding:20px;">{{ task.title }}</h1>
+<div style="text-align: center; font-size: 20px;">
+    <p>Due Date: {{ task.due_date }}</p>
+</div>
+<div style="margin:auto; width: 100px;">
+    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'todolist-delete' object.id %}">Delete</a>
+</div>
+{% endblock %}
