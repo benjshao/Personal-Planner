@@ -9,6 +9,10 @@ All of the items are displayed on the dashboard page, and are organized in a way
 
 ![Alt text](/Screenshots/Dashboard.png?raw=true "Dashboard")
 
+Clicking on the item title leads to a page with a delete button, where the user can remove the item from the dashboard.
+
+![Alt text](/Screenshots/Details.png?raw=true "Dashboard")
+
 The about page shows a short description of the web application.
 
 ![Alt text](/Screenshots/About.png?raw=true "Dashboard")
